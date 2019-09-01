@@ -1,2 +1,2 @@
 # Nptel
-Practic examples
+Practice examples
