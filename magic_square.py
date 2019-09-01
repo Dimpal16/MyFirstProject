@@ -38,5 +38,5 @@ def magic_square(n):
       print(magicSquare[i][j], end=' ')
     print()
   
-size = int(input("Enter the size of magic square: "))
+size = int(input("Enter the size of magic square(odd): "))
 magic_square(size)
