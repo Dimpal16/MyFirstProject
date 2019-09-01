@@ -1,2 +1,2 @@
-# MyFirstProject
-Bank Management System
+# Nptel
+Practic examples
