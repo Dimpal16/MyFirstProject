@@ -1,6 +1,7 @@
 import random
 movies = ["iron man", "hulk", "captain america", "captain marvell", "grood", "vision"]
 
+#Creating a question depending on the movie name 
 def create_question(movie):
     letters = list(movie)
     temp = []
@@ -12,6 +13,7 @@ def create_question(movie):
     qn = ''.join(str(x) for x in temp)
     return qn
 
+#Check if the entered letter is present in movie naem
 def is_present(letter, movie):
     c = movie.count(letter)
     if(c==0):
@@ -19,6 +21,7 @@ def is_present(letter, movie):
     else:
         return True
     
+#unlcok the characters present  
 def unlock(qn, movie, letter):
     ref = list(movie)
     qn_list = list(qn)
