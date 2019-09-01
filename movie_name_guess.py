@@ -25,18 +25,15 @@ def unlock(qn, movie, letter):
     temp = []
     n = len(movie)
     for i in range(n):
-        if (ref[i]==letter or ref[i]==" "):
+        if(ref[i]==letter or ref[i]==" "):
             temp.append(ref[i])
-            print(temp)
         else:
             if(qn_list[i]=='*'):
                 temp.append('*')
-                print(temp)
             else:
                 temp.append(ref[i])
-                print(temp)
-        qn_new = ''.join(str(x) for x in temp)
-        return qn_new
+    qn_new = ''.join(str(x) for x in temp)
+    return qn_new
     
 def play():
   name1 = input("Enter the name of player 1: ")
@@ -59,8 +56,8 @@ def play():
           #Display the modified name
           modified_qn = unlock(modified_qn, picked_movie, letter)
           print(modified_qn)
-          d = input("Press 1 to guess the movie or 2 to unlock another letter: ")
-          if(d=='1'):
+          d = int(input("Press 1 to guess the movie or 2 to unlock another letter: "))
+          if(d==1):
               ans = input("Enter your guess: ")
               if(ans == picked_movie):
                   pp1 = pp1+1
@@ -71,12 +68,12 @@ def play():
                   print("Not correct! \n Try unlocking another character.")
         else:
           print(letter," not found")
-      c = input("Press 1 to continue or 0 to quit: ")
+      c = int(input("Press 1 to continue or 0 to quit: "))
       if(c==0):
           print(name1, "Your Score: ", pp1)
           print(name2, "Your Score: ", pp2)
           print("Thanks for playing, Have a Good day!")
-          willing = False
+          break
     else:
         
        #Player 2 coded
@@ -92,7 +89,7 @@ def play():
           #Display the modified name
           modified_qn = unlock(modified_qn, picked_movie, letter)
           print(modified_qn)
-          d = input("Press 1 to guess the movie or 2 to unlock another letter: ")
+          d = int(input("Press 1 to guess the movie or 2 to unlock another letter: "))
           if(d==1):
               ans = input("Enter your guess: ")
               if(ans == picked_movie):
@@ -104,12 +101,12 @@ def play():
                   print("Not correct! \n Try unlocking another character.")
         else:
           print(letter," not found")
-      c = input("Press 1 to continue or 0 to quit: ")
+      c = int(input("Press 1 to continue or 0 to quit: "))
       if(c==0):
           print(name1, "Your Score: ", pp1)
           print(name2, "Your Score: ", pp2)
           print("Thanks for playing, Have a Good day!")
-          willing = False
+          break
     turn = turn + 1
       
 play()
