@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep  9 20:04:34 2019
-
-@author: Dimpoo
-"""
-
 import numpy as np
 from datetime import datetime
 
